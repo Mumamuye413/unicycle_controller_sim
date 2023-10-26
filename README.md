@@ -35,13 +35,13 @@ This controller was designed from the robot's kinematic model and the tracking e
     
 * Kinematic Equations in Cartesian coordinates system
 
-    ```math
-    \begin{align}
-    \dot{z}_x &= v \cos z_{\theta}\\
-    \dot{z}_y &= v \sin z_{\theta}\\
+```math
+\begin{align}
+    \dot{z}_x &= v \cos z_{\theta} \\
+    \dot{z}_y &= v \sin z_{\theta} \\
     \dot{z}_{\theta} &= \omega
-    \end{align}
-    ```
+\end{align}
+```
 
 * Compute $\mathbf{g}'$
 
