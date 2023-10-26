@@ -64,8 +64,9 @@ This controller was designed from the robot's kinematic model and the tracking e
 ```math
 \begin{align}
     v &= k_v \max(0, e') = k_v \max(0, \left[ \begin{matrix}  \cos z_{\theta} \\ \sin z_{\theta}  \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_v>0
-
+    \\
     \omega &= k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_{\omega}>0
+\end{align}
 ```
 
 * Simulated Robot Trajectories
