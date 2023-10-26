@@ -45,21 +45,28 @@ This controller was designed from the robot's kinematic model and the tracking e
 
 * Compute $\mathbf{g}'$
 
-    ```math
+```math
     \mathbf{g}'= \mathbf{R}(-z_{\theta})(\mathbf{g} - \mathbf{z}_{\mathbf{p}}), 
     \quad \mathbf{R}(-z_{\theta}) = \left[ \begin{matrix} \quad \cos z_{\theta} \quad \sin z_{\theta} \\ \ -\sin z_{\theta} \quad \cos z_{\theta} \end{matrix} \right]
-    ```
+```
 
 * Compute Error States
-    $\begin{align}
+
+```math
+    \begin{align}
     e'_{ \ \ } &= \max \ (0, \ g'_x) \\
     e_{\phi} &= \arctan2 \ (g'_y, \ g'_x)
-    \end{align}$
+    \end{align}
+```
 
 * Design Control Law
-    $$v=k_v \max(0, e') = k_v \max(0, \left[ \begin{matrix}  \cos z_{\theta} \\ \sin z_{\theta}  \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_v>0$$
 
-    $$\omega = k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_{\omega}>0$$
+```math
+\begin{align}
+    v &= k_v \max(0, e') = k_v \max(0, \left[ \begin{matrix}  \cos z_{\theta} \\ \sin z_{\theta}  \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_v>0
+
+    \omega &= k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_{\omega}>0
+```
 
 * Simulated Robot Trajectories
     * Randomly sampled initial poses
@@ -84,15 +91,18 @@ The bi-directional position tracking controller employs a notation consistent wi
 
 * Compute New Error States
 
-    $\begin{align}
+```math
+    \begin{align}
     e_{ \ \ } &= \ g'_x \\
     e_{\phi} &= \begin{cases}
     0, \quad \quad \quad \  g'_x=g'_y=0 \\
     \arctan \ (\frac{g'_y}{g'_x}), \quad  otherwise
     \end{cases}
-    \end{align}$
+    \end{align}
+```
 
 * Simulated Robot Trajectories
+
     * Randomly sampled initial poses
     ![random trajectories](/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png)
 
