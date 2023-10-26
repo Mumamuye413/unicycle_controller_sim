@@ -31,20 +31,24 @@ This controller was designed from the robot's kinematic model and the tracking e
 
     Tracking heading error $\quad e_{\phi} \in [-\pi, \pi]$
 
-    ![Geometry Vis](/readme_fig/cone_geo.png)
+    ![Geometry Vis](https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/bdcone_geo.png)
     
 * Kinematic Equations in Cartesian coordinates system
 
-    $\begin{align}
+    ```math
+    \begin{align}
     \dot{z}_x &= v \cos z_{\theta}\\
     \dot{z}_y &= v \sin z_{\theta}\\
     \dot{z}_{\theta} &= \omega
-    \end{align}$
+    \end{align}
+    ```
 
 * Compute $\mathbf{g}'$
 
-    $\mathbf{g}'= \mathbf{R}(-z_{\theta})(\mathbf{g} - \mathbf{z}_{\mathbf{p}})$, 
-    $\quad \mathbf{R}(-z_{\theta}) = \left[ \begin{matrix} \quad \cos z_{\theta} \quad \sin z_{\theta} \\ \ -\sin z_{\theta} \quad \cos z_{\theta} \end{matrix} \right]$
+    ```math
+    \mathbf{g}'= \mathbf{R}(-z_{\theta})(\mathbf{g} - \mathbf{z}_{\mathbf{p}}), 
+    \quad \mathbf{R}(-z_{\theta}) = \left[ \begin{matrix} \quad \cos z_{\theta} \quad \sin z_{\theta} \\ \ -\sin z_{\theta} \quad \cos z_{\theta} \end{matrix} \right]
+    ```
 
 * Compute Error States
     $\begin{align}
