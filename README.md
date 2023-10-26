@@ -30,8 +30,8 @@ This controller was designed from the robot's kinematic model and the tracking e
     Tracking distance error $\quad e >0$
 
     Tracking heading error $\quad e_{\phi} \in [-\pi, \pi]$
-
-    ![Geometry Vis](https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/bdcone_geo.png)
+  
+    <img src="https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/bdcone_geo.png" width="400">
     
 * Kinematic Equations in Cartesian coordinates system
 
@@ -63,18 +63,18 @@ This controller was designed from the robot's kinematic model and the tracking e
 
 ```math
 \begin{align}
-    v &= k_v \max(0, e') = k_v \max(0, \left[ \begin{matrix}  \cos z_{\theta} \\ \sin z_{\theta}  \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_v>0
+    v &= k_v \max(0, e') = k_v \max(0, \left[ \begin{matrix}  \cos z_{\theta} \\ \sin z_{\theta}  \end{matrix} \right] ^T (\mathbf{g}-\mathbf{z})), \quad k_v>0
     \\
-    \omega &= k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\bold{g}-\bold{z})), \quad k_{\omega}>0
+    \omega &= k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\mathbf{g}-\mathbf{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\mathbf{g}-\mathbf{z})), \quad k_{\omega}>0
 \end{align}
 ```
 
 * Simulated Robot Trajectories
     * Randomly sampled initial poses
-    ![random trajectories](/fig/Cone_GoalFixed_RandomInit_Trajectories.png)
+    <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400">
 
     * Selected sampled initial poses
-    ![selected trajectories](/fig/Cone_GoalFixed_SelectInit_Trajectories.png)
+    <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400">
 
 #### Modifidation for bi-directional motion
 
@@ -88,7 +88,7 @@ The bi-directional position tracking controller employs a notation consistent wi
 
 * Goemetry Visualization
 
-    ![bi-directional cone goemetry](/readme_fig/bdcone_geo.png)
+    <img src="https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/bdcone_geo.png" width="400">
 
 * Compute New Error States
 
@@ -105,10 +105,11 @@ The bi-directional position tracking controller employs a notation consistent wi
 * Simulated Robot Trajectories
 
     * Randomly sampled initial poses
-    ![random trajectories](/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png)
+    <img src="/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png" width="400">
 
     * Selected sampled initial poses
-    ![selected trajectories](/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png)
+    <img src="/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png" width="400">
+
 
 
 
