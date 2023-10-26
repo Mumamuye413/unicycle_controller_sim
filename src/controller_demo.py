@@ -229,6 +229,7 @@ class ControllerDemo:
         generate file name for saving figures
         """
         controller = self.controller_type
+
         if self.bi_direction:
             fig_name = controller+'BD_'
         else:
@@ -238,6 +239,12 @@ class ControllerDemo:
             fig_name  += 'GoalFixed_'
         else:
             fig_name  += 'GoalVary_'
+
+        if self.random_initial_pose:
+            fig_name += 'RandomInit_'
+        else:
+            fig_name += 'SelectInit_'
+
         return fig_name
 
     def dump_data(self, ControllerObject):
@@ -296,8 +303,8 @@ class ControllerDemo:
         plt.show(block=True)
 
         if save_fig:
-            fig = self.figure
-            save_fig_to_folder(fig, "fig", fig_name+'Trajectories', ftype_ext='pdf')
+            fig = self.figure[0]
+            save_fig_to_folder(fig, "fig", fig_name+'Trajectories')
 
 
 if __name__ == '__main__':
@@ -305,7 +312,7 @@ if __name__ == '__main__':
     # pick controller for demo [Cone] or [Polar]
     controller_type = "Cone"
     # pick map range [-map_size, map_size] 
-    map_size = 1
+    map_size = 2
     # set goal pose
     zg = np.array([0.0, 0.0, 0.0])
     # define control input constraints [u1min, u1max, u2min, u2max]
@@ -318,7 +325,8 @@ if __name__ == '__main__':
                              full_trajectories=True,
                              fixed_goal_pose=True,
                              bi_direction=True,
-                             random_initial_pose=True,
+                             random_initial_pose=False,
+                             save_fig=True,
                              view_dynamics=False,   # can be True only if (not full_trajectories)
                              )
     RunDemo.demo_controller()
