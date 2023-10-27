@@ -71,13 +71,8 @@ This controller was derived from the robot's kinematic model and the motion mode
 ```
     
 * Simulated Robot Trajectories
-<p align="center">
-    <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400">
-    <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400">
-</p>
 
-
- Randomly sampled initial poses.      | Selected sampled initial poses.      
+ Randomly sampled initial poses       | Selected sampled initial poses      
  -------------------------------------| -------------------------------------
  ![random trj](/fig/Cone_GoalFixed_RandomInit_Trajectories.png)| ![selected_trj](/fig/Cone_GoalFixed_SelectInit_Trajectories.png)
 
