@@ -74,7 +74,7 @@ This controller was derived from the robot's kinematic model and the motion mode
 
 <p align="middle">
   <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400" />
-  <img src="/fig/Cone_GoalFixed_SelectmInit_Trajectories.png" width="400" />
+  <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400" />
 </p>
 
 
@@ -260,8 +260,8 @@ To enable full backward motion for the robot when the goal position falls within
 * Simulated Robot Trajectories
 
 <p align="middle">
-    <img src="/fig/BDPolar_GoalFixed_RandomInit_Trajectories.png" width="400">
-    <img src="/fig/BDPolar_GoalFixed_SelectInit_Trajectories.png" width="400">
+    <img src="/fig/PolarBD_GoalFixed_RandomInit_Trajectories.png" width="400">
+    <img src="/fig/PolarBD_GoalFixed_SelectInit_Trajectories.png" width="400">
 </p>
 
 
