@@ -72,6 +72,10 @@ This controller was derived from the robot's kinematic model and the motion mode
     
 * Simulated Robot Trajectories
 
+<p align="middle">
+  <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400" />
+  <img src="/fig/Cone_GoalFixed_SelectmInit_Trajectories.png" width="400" />
+</p>
 
 
 #### Modifidation for bi-directional motion
@@ -102,7 +106,7 @@ The bi-directional position tracking controller employs a notation consistent wi
 
 * Simulated Robot Trajectories
 
-<p align="center">
+<p align="middle">
     <img src="/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png" width="400">
     <img src="/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png" width="400">
 </p>
@@ -195,6 +199,11 @@ The control law was developed by constructing a Lyapunov function based on error
 
 * Simulated Robot Trajectories
 
+<p align="middle">
+    <img src="/fig/Polar_GoalFixed_RandomInit_Trajectories.png" width="400">
+    <img src="/fig/Polar_GoalFixed_SelectInit_Trajectories.png" width="400">
+</p>
+
 #### Modifidation for bi-directional motion
 
 To enable full backward motion for the robot when the goal position falls within the robot's rear half-plane, we introduce a virtual goal pose that located at the same position but points in the opposite direction of the actual goal pose. The robot then aligns its rear heading with this virtual goal's heading to maintain alignment with the actual goal heading.
@@ -249,6 +258,11 @@ To enable full backward motion for the robot when the goal position falls within
 ```
 
 * Simulated Robot Trajectories
+
+<p align="middle">
+    <img src="/fig/BDPolar_GoalFixed_RandomInit_Trajectories.png" width="400">
+    <img src="/fig/BDPolar_GoalFixed_SelectInit_Trajectories.png" width="400">
+</p>
 
 
 
