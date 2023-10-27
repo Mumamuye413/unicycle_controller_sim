@@ -1,3 +1,8 @@
+| Cat pics                            | Dog pics                            |
+| ------------------------------------| ----------------------------------- |
+
+
+
 # unicycle_controller_sim
 This repository features the code for two unicycle controllers, showcasing their performance in goal tracking. Each controller offers two distinct modes: the forward motion-only mode (as outlined in the reference paper) and the newly introduced bi-directional driving mode. It is part of Zhuolin Niu's [master thesis](https://escholarship.org/content/qt1jd778fm/qt1jd778fm.pdf).
 
@@ -68,13 +73,17 @@ This controller was designed from the robot's kinematic model and the tracking e
     \omega &= k_{\omega} e_{\phi} = k_{\omega} \arctan2 ( \left[\begin{matrix} \ -\sin z_{\theta} \\ \cos z_{\theta} \end{matrix} \right] ^T (\mathbf{g}-\mathbf{z}),\quad \left[ \begin{matrix} \cos z_{\theta} \\ \sin z_{\theta} \end{matrix} \right] ^T (\mathbf{g}-\mathbf{z})), \quad k_{\omega}>0
 \end{align}
 ```
-
+    
 * Simulated Robot Trajectories
-    * Randomly sampled initial poses
+<p align="center">
     <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400">
-
-    * Selected sampled initial poses
     <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400">
+</p>
+
+
+ Randomly sampled initial poses.      | Selected sampled initial poses.      
+ -------------------------------------| -------------------------------------
+ ![random trj](/fig/Cone_GoalFixed_RandomInit_Trajectories.png)| ![selected_trj](/fig/Cone_GoalFixed_SelectInit_Trajectories.png)
 
 #### Modifidation for bi-directional motion
 
