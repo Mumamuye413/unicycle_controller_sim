@@ -22,9 +22,9 @@ This controller was derived from the robot's kinematic model and the motion mode
 
     Robot angular velocity $\quad \omega$
 
-    Goal position in world frame $\{ W \}$ $\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T$
+    Goal position in world frame $\leftbrace W \rightbrace$ $\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T$
 
-    Goal pose in world frame $\{ W \}$ $\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T$
+    Goal pose in world frame $ W $ $\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T$
 
     Goal position in robot body frame $\{ B \}$ $\quad \mathbf{g}'=[g'_x, \ g'_y]^T$
 
@@ -48,7 +48,7 @@ This controller was derived from the robot's kinematic model and the motion mode
 
 ```math
     \mathbf{g}'= \mathbf{R}(-z_{\theta})(\mathbf{g} - \mathbf{z}_{\mathbf{p}}), 
-    \quad \mathbf{R}(-z_{\theta}) = \left[ \begin{matrix} \quad \cos z_{\theta} \quad \sin z_{\theta} \\ \ -\sin z_{\theta} \quad \cos z_{\theta} \end{matrix} \right]
+    \quad \mathbf{R}(-z_{\theta}) = \left[ \begin{matrix} \quad \cos z_{\theta} \quad \sin z_{\theta} \\ \ -\sin z_{\theta} \quad \cos z_{\theta}         \end{matrix} \right]
 ```
 
 * Compute Error States
@@ -72,9 +72,6 @@ This controller was derived from the robot's kinematic model and the motion mode
     
 * Simulated Robot Trajectories
 
- Randomly sampled initial poses       | Selected sampled initial poses      
- -------------------------------------| -------------------------------------
- ![random trj](/fig/Cone_GoalFixed_RandomInit_Trajectories.png)| ![selected_trj](/fig/Cone_GoalFixed_SelectInit_Trajectories.png)
 
 #### Modifidation for bi-directional motion
 
@@ -104,12 +101,10 @@ The bi-directional position tracking controller employs a notation consistent wi
 
 * Simulated Robot Trajectories
 
-    * Randomly sampled initial poses
+<p align="center">
     <img src="/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png" width="400">
-
-    * Selected sampled initial poses
     <img src="/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png" width="400">
-
+</p>
 
 ### Goal Pose Alignment Controller
 #### Reference 
@@ -161,9 +156,9 @@ The control law was developed by constructing a Lyapunov function based on error
 
 ```math
     \begin{align}
-    \e &= \| \mathbf{z}'_{\mathbf{p}} \| \\
-    \e_{\phi} &= \arctan2 \ (-z'_y, \ -z'_x) \\
-    \e_{\delta} &= e_{\phi} - z_{\phi}
+    e &= \| \mathbf{z}'_{\mathbf{p}} \| \\
+    e_{\phi} &= \arctan2 \ (-z'_y, \ -z'_x) \\
+    e_{\delta} &= e_{\phi} - z_{\phi}
     \end{align}
 ```
 
@@ -194,6 +189,7 @@ The control law was developed by constructing a Lyapunov function based on error
 \dot{V}_1 \leq 0: \quad  &v = k_v e \cos e_{\delta}; \\
 
 \dot{V}_2 \leq 0: \quad &\omega = k_{\delta} e_{\delta} + k_v \frac{\cos e_{\delta} \sin e_{\delta}}{e_{\delta}} (e_{\delta} + h e_{\phi})
+\end{align}
 ```
 
 * Simulated Robot Trajectories
@@ -204,9 +200,9 @@ To enable full backward motion for the robot when the goal position falls within
 
 * New & Updated Notations
 
-    Virtual goal pose in world frame $\{ W \}$ $\quad \hat{\mathbf{g}} = [g_x, \ g_y, \ \hat{g}_{\theta}]^T$
+    Virtual goal pose in world frame {W} $\quad \hat{\mathbf{g}} = [g_x, \ g_y, \ \hat{g}_{\theta}]^T$
 
-    Robot pose in virtual goal frame $\{ \hat{G} \}$ $\quad \hat{\mathbf{z}}' = [\hat{z}'_x, \ \hat{z}'_y, \ \hat{z}_{\phi}]^T $
+    Robot pose in virtual goal frame $\{ \hat{G} \}$ $\quad \hat{\mathbf{z}}' = [\hat{z}'_x, \ \hat{z}'_y, \ \hat{z}_{\phi}]^T$
 
     Tracking heading error w.r.t. $\hat{g}_{\theta}$ $\quad \hat{e}_{\phi} \in [-\frac{\pi}{2}, \frac{\pi}{2}]$
 
@@ -221,7 +217,7 @@ To enable full backward motion for the robot when the goal position falls within
 ```math
     \begin{align}
     \e &= \| \mathbf{z}'_{\mathbf{p}} \| \\
-    \hat{e}_{\phi} &= \arctan \fraq{z'_y}{z'_x} \\
+    \hat{e}_{\phi} &= \arctan \frac{z'_y}{z'_x} \\
     \hat{e}_{\delta} &= \hat{e}_{\phi} - z_{\phi}
     \end{align}
 ```
