@@ -1,7 +1,3 @@
-| Cat pics                            | Dog pics                            |
-| ------------------------------------| ----------------------------------- |
-
-
 
 # unicycle_controller_sim
 This repository features the code for two unicycle controllers, showcasing their performance in goal tracking. Each controller offers two distinct modes: the forward motion-only mode (as outlined in the reference paper) and the newly introduced bi-directional driving mode. It is part of Zhuolin Niu's [master thesis](https://escholarship.org/content/qt1jd778fm/qt1jd778fm.pdf).
@@ -75,13 +71,8 @@ This controller was designed from the robot's kinematic model and the tracking e
 ```
     
 * Simulated Robot Trajectories
-<p align="center">
-    <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400">
-    <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400">
-</p>
 
-
- Randomly sampled initial poses.      | Selected sampled initial poses.      
+ Randomly sampled initial poses       | Selected sampled initial poses      
  -------------------------------------| -------------------------------------
  ![random trj](/fig/Cone_GoalFixed_RandomInit_Trajectories.png)| ![selected_trj](/fig/Cone_GoalFixed_SelectInit_Trajectories.png)
 
