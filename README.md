@@ -264,8 +264,21 @@ To enable full backward motion for the robot when the goal position falls within
     <img src="/fig/PolarBD_GoalFixed_SelectInit_Trajectories.png" width="400">
 </p>
 
+#### States and Control Input Visualization
 
+For the system's convergence process from each inital state, we also provide visualizations of error states and control input signals over time.
 
+* 2D Trajectory
+
+    <img src="/fig/trajectory.png" width="400">
+
+* Error States over Time
+
+    <img src="/fig/states.png" width="400">
+
+* Control Inputs over Time
+
+    <img src="/fig/control.png" width="400">
 
 
 

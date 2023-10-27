@@ -322,11 +322,11 @@ if __name__ == '__main__':
                              map_size=map_size, 
                              controller_type=controller_type,
                              control_bounds=control_bounds,
-                             full_trajectories=True,
+                             full_trajectories=False,
                              fixed_goal_pose=True,
                              bi_direction=True,
                              random_initial_pose=True,
                              save_fig=True,
-                             view_dynamics=False,   # can be True only if (not full_trajectories)
+                             view_dynamics=True,   # can be True only if (not full_trajectories)
                              )
     RunDemo.demo_controller()
