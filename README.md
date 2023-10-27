@@ -14,23 +14,23 @@ This controller was derived from the robot's kinematic model and the motion mode
 
 * Notation & Goemetry Visualization
 
-    Robot position $\quad \mathbf{z}_{\mathbf{p}} = [z_x, \ z_y]^T $
+    Robot position $`\quad \mathbf{z}_{\mathbf{p}} = [z_x, \ z_y]^T`$
 
-    Robot pose $\quad \mathbf{z} = [z_x, \ z_y, \ z_{\theta}]^T $
+    Robot pose $`\quad \mathbf{z} = [z_x, \ z_y, \ z_{\theta}]^T`$
 
     Robot linear velocity $\quad v$
 
     Robot angular velocity $\quad \omega$
 
-    Goal position in world frame $\leftbrace W \rightbrace$ $\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T$
+    Goal position in world frame $\lbrace W \rbrace$ $`\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T`$
 
-    Goal pose in world frame $ W $ $\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T$
+    Goal pose in world frame $\lbrace W \rbrace$ $`\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T`$
 
-    Goal position in robot body frame $\{ B \}$ $\quad \mathbf{g}'=[g'_x, \ g'_y]^T$
+    Goal position in robot body frame $\lbrace B \rbrace$ $`\quad \mathbf{g}'=[g'_x, \ g'_y]^T`$
 
     Tracking distance error $\quad e >0$
 
-    Tracking heading error $\quad e_{\phi} \in [-\pi, \pi]$
+    Tracking heading error $`\quad e_{\phi} \in [-\pi, \pi]`$
   
     <img src="https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/bdcone_geo.png" width="400">
     
@@ -73,15 +73,16 @@ This controller was derived from the robot's kinematic model and the motion mode
 * Simulated Robot Trajectories
 
 
+
 #### Modifidation for bi-directional motion
 
 The bi-directional position tracking controller employs a notation consistent with the forward motion only position tracking controller introduced earlier, while incorporating adjustments in error state difination. The control law was subsequently formulated using the newly defined error states with the same equations.
 
 * Updated Notations
 
-    Bi-directional tracking distance error $\quad e \in \mathbb{R}$
+    Bi-directional tracking distance error $`\quad e \in \mathbb{R}`$
 
-    Bi-directional tracking heading error $\quad e_{\phi} \in [-\frac{\pi}{2}, \frac{\pi}{2}]$
+    Bi-directional tracking heading error $`\quad e_{\phi} \in [-\frac{\pi}{2}, \frac{\pi}{2}]`$
 
 * Goemetry Visualization
 
@@ -118,27 +119,27 @@ The control law was developed by constructing a Lyapunov function based on error
 
 * Notation & Goemetry Visualization
 
-    Robot position in world frame $\{ W \}$ $\quad \mathbf{z}_{\mathbf{p}} = [z_x, \ z_y]^T $
+    Robot position in world frame $\lbrace W \rbrace$ $`\quad \mathbf{z}_{\mathbf{p}} = [z_x, \ z_y]^T`$
 
-    Robot pose in world frame $\{ W \}$ $\quad \mathbf{z} = [z_x, \ z_y, \ z_{\theta}]^T $
+    Robot pose in world frame $\lbrace W \rbrace$ $`\quad \mathbf{z} = [z_x, \ z_y, \ z_{\theta}]^T`$
 
     Robot linear velocity $\quad v$
 
     Robot angular velocity $\quad \omega$
 
-    Goal position in world frame $\{ W \}$ $\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T$
+    Goal position in world frame $\lbrace W \rbrace$ $`\quad \mathbf{g}_{\mathbf{p}} = [g_x, \ g_y]^T`$
 
-    Goal pose in world frame $\{ W \}$ $\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T$
+    Goal pose in world frame $\lbrace W \rbrace$ $`\quad \mathbf{g} = [g_x, \ g_y, \ g_{\theta}]^T`$
 
-    Robot position in goal frame $\{ G \}$ $\quad \mathbf{z}'_{\mathbf{p}} = [z'_x, \ z'_y]^T $
+    Robot position in goal frame $\lbrace G\rbrace$ $`\quad \mathbf{z}'_{\mathbf{p}} = [z'_x, \ z'_y]^T`$
 
-    Robot pose in goal frame $\{ G \}$ $\quad \mathbf{z}' = [z'_x, \ z'_y, \ z_{\phi}]^T $
+    Robot pose in goal frame $\lbrace G \rbrace$    $`\quad \mathbf{z}' = [z'_x,\ z'_y,\ z'_{\phi}]^T`$
 
-    Tracking distance error $\quad e \in \mathbb{R}$
+    Tracking distance error $`\quad e \in \mathbb{R}`$
 
-    Tracking heading error $\quad e_{\phi} \in [-\pi, \pi]$
+    Tracking heading error $`\quad e_{\phi} \in [-\pi, \pi]`$
 
-    Heading alignment error $\quad e_{\delta} \in [-\pi, \pi]$
+    Heading alignment error $`\quad e_{\delta} \in [-\pi, \pi]`$
 
     <img src="https://github.com/Mumamuye413/unicycle_controller_sim/blob/main/readme_fig/polar_geo.png" width="400">
 
@@ -200,13 +201,13 @@ To enable full backward motion for the robot when the goal position falls within
 
 * New & Updated Notations
 
-    Virtual goal pose in world frame {W} $\quad \hat{\mathbf{g}} = [g_x, \ g_y, \ \hat{g}_{\theta}]^T$
+    Virtual goal pose in world frame $\lbrace W \rbrace$ $`\quad \hat{\mathbf{g}} = [g_x, \ g_y, \ \hat{g}_{\theta}]^T`$
 
-    Robot pose in virtual goal frame $\{ \hat{G} \}$ $\quad \hat{\mathbf{z}}' = [\hat{z}'_x, \ \hat{z}'_y, \ \hat{z}_{\phi}]^T$
+    Robot pose in virtual goal frame $\lbrace \hat{G} \rbrace$ $`\quad \hat{\mathbf{z}}' = [\hat{z}'_x, \ \hat{z}'_y, \ \hat{z}_{\phi}]^T`$
 
-    Tracking heading error w.r.t. $\hat{g}_{\theta}$ $\quad \hat{e}_{\phi} \in [-\frac{\pi}{2}, \frac{\pi}{2}]$
+    Tracking heading error w.r.t. $\hat{g}_{\theta}$ $`\quad \hat{e}_{\phi} \in [-\frac{\pi}{2}, \frac{\pi}{2}]`$
 
-    Heading alignment error w.r.t. $\hat{g}_{\theta}$ $\quad \hat{e}_{\delta} \in [-\frac{\pi}{2}, \frac{\pi}{2}]$
+    Heading alignment error w.r.t. $\hat{g}_{\theta}$ $`\quad \hat{e}_{\delta} \in [-\frac{\pi}{2}, \frac{\pi}{2}]`$
 
 * Goemetry Visualization
 
@@ -216,7 +217,7 @@ To enable full backward motion for the robot when the goal position falls within
 
 ```math
     \begin{align}
-    \e &= \| \mathbf{z}'_{\mathbf{p}} \| \\
+    e &= \| \mathbf{z}'_{\mathbf{p}} \| \\
     \hat{e}_{\phi} &= \arctan \frac{z'_y}{z'_x} \\
     \hat{e}_{\delta} &= \hat{e}_{\phi} - z_{\phi}
     \end{align}
@@ -236,7 +237,8 @@ To enable full backward motion for the robot when the goal position falls within
 
 ```math
     \begin{aligned}
-    v &= \begin{cases} k_v e \cos \hat{e}_{\delta}, \quad &[\cos z_{\theta}, \sin z_{\theta} ](\mathbf{g}_{\mathbf{p}}-\mathbf{z}_\{\mathbf{p}})< 0 \\
+    v &= \begin{cases}
+        k_v e \cos \hat{e}_{\delta}, \quad &[\cos z_{\theta}, \sin z_{\theta} ](\mathbf{g}_{\mathbf{p}}-\mathbf{z}_{\mathbf{p}})< 0 \\
         k_v e \cos e_{\delta}, \quad &otherwise
         \end{cases} \\
     \omega &= \begin{cases} k_{\delta} \hat{e}_{\delta} + k_v \frac{\cos \hat{e}_{\delta} \sin \hat{e}_{\delta}}{\hat{e}_{\delta}} (\hat{e}_{\delta}+h \hat{e}_{\phi}), 
