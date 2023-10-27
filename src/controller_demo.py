@@ -310,7 +310,7 @@ class ControllerDemo:
 if __name__ == '__main__':
 
     # pick controller for demo [Cone] or [Polar]
-    controller_type = "Cone"
+    controller_type = "Polar"
     # pick map range [-map_size, map_size] 
     map_size = 2
     # set goal pose
@@ -325,7 +325,7 @@ if __name__ == '__main__':
                              full_trajectories=True,
                              fixed_goal_pose=True,
                              bi_direction=True,
-                             random_initial_pose=False,
+                             random_initial_pose=True,
                              save_fig=True,
                              view_dynamics=False,   # can be True only if (not full_trajectories)
                              )
