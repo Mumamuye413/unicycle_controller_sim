@@ -74,7 +74,7 @@ This controller was derived from the robot's kinematic model and the motion mode
 
 <p align="middle">
   <img src="/fig/Cone_GoalFixed_RandomInit_Trajectories.png" width="400" />
-  <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="400" />
+  <img src="/fig/Cone_GoalFixed_SelectInit_Trajectories.png" width="398" />
 </p>
 
 
@@ -108,7 +108,7 @@ The bi-directional position tracking controller employs a notation consistent wi
 
 <p align="middle">
     <img src="/fig/ConeBD_GoalFixed_RandomInit_Trajectories.png" width="400">
-    <img src="/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png" width="400">
+    <img src="/fig/ConeBD_GoalFixed_SelectInit_Trajectories.png" width="406">
 </p>
 
 ### Goal Pose Alignment Controller
